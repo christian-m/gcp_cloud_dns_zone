@@ -9,7 +9,7 @@ resource "google_dns_managed_zone" "default" {
 }
 
 module "dns_record" {
-  source      = "git::git@bitbucket.org:christian_m/gcp_cloud_dns_resource_record.git?ref=v1.0"
+  source   = "git::git@bitbucket.org:christian_m/gcp_cloud_dns_resource_record.git?ref=v1.0"
   for_each = var.domain_records
 
   environment = var.environment
