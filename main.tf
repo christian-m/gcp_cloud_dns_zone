@@ -9,7 +9,7 @@ resource "google_dns_managed_zone" "default" {
 }
 
 module "dns_record" {
-  source   = "git::git@github.com:christian-m/gcp_cloud_dns_resource_record.git?ref=v1.1"
+  source   = "git::git@gitlab.com:cma-lab/tf-modules/gcp/gcp_cloud_dns_resource_record.git?ref=v1.1"
   for_each = var.domain_records
 
   environment = var.environment
